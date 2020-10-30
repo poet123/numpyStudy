@@ -15,4 +15,21 @@ print('只保留行',c)
 
 #resize改变向量的维度，同时修改向量的本身
 b=arr.resize(2,5)
-print('a 修改后 ')
+print('修改后 a也随着改表',arr,'\n\n\n\n')
+
+#转置
+a=np.arange(12).reshape(3,4)
+print(a)
+print('转置后的a',a.T)
+print(a)
+
+#展平
+print('按照列优先展平',a.ravel('F'))
+print('按照行优先级展开',a.ravel())
+print('\n\n\n\n')
+
+#将矩阵转换为向量
+#np.floor() 向下取整
+a=np.floor(10 * np.random.random((3,4)))
+print('a',a)
+print('转为向量后：',a.flatten())
