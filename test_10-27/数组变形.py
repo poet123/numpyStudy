@@ -33,3 +33,19 @@ print('\n\n\n\n')
 a=np.floor(10 * np.random.random((3,4)))
 print('a',a)
 print('转为向量后：',a.flatten())
+
+#降维
+b=np.arange(3).reshape(3,1)
+print('没有降维前',b)
+print('降维后：',b.squeeze())
+
+c=np.arange(6).reshape(3,1,2,1)
+print('没有降维\n',c)
+print('降维后：\n',c.squeeze().shape)
+
+#高维矩阵的轴对换
+d=np.arange(24).reshape(2,3,4)
+print('未对换之前\n',d)
+#print('对换后\n',d.transpose(0,2,1))#(,2,4,3)(右旋90)
+print(d.transpose(2,1,0))#4,3,2
+
